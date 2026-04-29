@@ -1,0 +1,199 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <style>
+            body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f0f2f5; padding: 40px; }
+            table { border-collapse: collapse; background: white; margin: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+            th, td { border: 1px solid #dee2e6; padding: 15px; text-align: center; min-width: 80px; }
+            th { background-color: #007bff; color: white; }
+            .header-char { font-weight: bold; background-color: #f8f9fa; color: #495057; }
+            .serial { color: #adb5bd; font-size: 0.75em; display: block; }
+            .lcs-val { color: #28a745; font-weight: bold; font-size: 1.1em; display: block; margin: 5px 0; }
+            .type { font-size: 0.7em; color: #6c757d; text-transform: uppercase; letter-spacing: 0.5px; }
+        </style>
+    </head>
+    <body>
+        <h2 style="text-align:center;">LCS Memoization Analysis</h2>
+        <table>
+            <tr><th></th><th>&Oslash;</th><th>C</th><th>H</th><th>A</th><th>R</th><th>T</th></tr><tr><td class='header-char'>&Oslash;</td>
+                <td>
+                    <span class="serial">#-</span>
+                    <span class="lcs-val">&empty;</span>
+                    <span class="type">Unvisited</span>
+                </td>
+                <td>
+                    <span class="serial">#3</span>
+                    <span class="lcs-val">&empty;</span>
+                    <span class="type">Base Case</span>
+                </td>
+                <td>
+                    <span class="serial">#-</span>
+                    <span class="lcs-val">&empty;</span>
+                    <span class="type">Unvisited</span>
+                </td>
+                <td>
+                    <span class="serial">#-</span>
+                    <span class="lcs-val">&empty;</span>
+                    <span class="type">Unvisited</span>
+                </td>
+                <td>
+                    <span class="serial">#-</span>
+                    <span class="lcs-val">&empty;</span>
+                    <span class="type">Unvisited</span>
+                </td>
+                <td>
+                    <span class="serial">#-</span>
+                    <span class="lcs-val">&empty;</span>
+                    <span class="type">Unvisited</span>
+                </td></tr><tr><td class='header-char'>H</td>
+                <td>
+                    <span class="serial">#2</span>
+                    <span class="lcs-val">&empty;</span>
+                    <span class="type">Base Case</span>
+                </td>
+                <td>
+                    <span class="serial">#4</span>
+                    <span class="lcs-val">&empty;</span>
+                    <span class="type">Inherit Left</span>
+                </td>
+                <td>
+                    <span class="serial">#6</span>
+                    <span class="lcs-val">H</span>
+                    <span class="type">Match (H)</span>
+                </td>
+                <td>
+                    <span class="serial">#-</span>
+                    <span class="lcs-val">&empty;</span>
+                    <span class="type">Unvisited</span>
+                </td>
+                <td>
+                    <span class="serial">#-</span>
+                    <span class="lcs-val">&empty;</span>
+                    <span class="type">Unvisited</span>
+                </td>
+                <td>
+                    <span class="serial">#-</span>
+                    <span class="lcs-val">&empty;</span>
+                    <span class="type">Unvisited</span>
+                </td></tr><tr><td class='header-char'>E</td>
+                <td>
+                    <span class="serial">#1</span>
+                    <span class="lcs-val">&empty;</span>
+                    <span class="type">Base Case</span>
+                </td>
+                <td>
+                    <span class="serial">#5</span>
+                    <span class="lcs-val">&empty;</span>
+                    <span class="type">Inherit Left</span>
+                </td>
+                <td>
+                    <span class="serial">#7</span>
+                    <span class="lcs-val">H</span>
+                    <span class="type">Inherit Top</span>
+                </td>
+                <td>
+                    <span class="serial">#-</span>
+                    <span class="lcs-val">&empty;</span>
+                    <span class="type">Unvisited</span>
+                </td>
+                <td>
+                    <span class="serial">#-</span>
+                    <span class="lcs-val">&empty;</span>
+                    <span class="type">Unvisited</span>
+                </td>
+                <td>
+                    <span class="serial">#-</span>
+                    <span class="lcs-val">&empty;</span>
+                    <span class="type">Unvisited</span>
+                </td></tr><tr><td class='header-char'>A</td>
+                <td>
+                    <span class="serial">#-</span>
+                    <span class="lcs-val">&empty;</span>
+                    <span class="type">Unvisited</span>
+                </td>
+                <td>
+                    <span class="serial">#-</span>
+                    <span class="lcs-val">&empty;</span>
+                    <span class="type">Unvisited</span>
+                </td>
+                <td>
+                    <span class="serial">#-</span>
+                    <span class="lcs-val">&empty;</span>
+                    <span class="type">Unvisited</span>
+                </td>
+                <td>
+                    <span class="serial">#8</span>
+                    <span class="lcs-val">HA</span>
+                    <span class="type">Match (A)</span>
+                </td>
+                <td>
+                    <span class="serial">#-</span>
+                    <span class="lcs-val">&empty;</span>
+                    <span class="type">Unvisited</span>
+                </td>
+                <td>
+                    <span class="serial">#-</span>
+                    <span class="lcs-val">&empty;</span>
+                    <span class="type">Unvisited</span>
+                </td></tr><tr><td class='header-char'>R</td>
+                <td>
+                    <span class="serial">#-</span>
+                    <span class="lcs-val">&empty;</span>
+                    <span class="type">Unvisited</span>
+                </td>
+                <td>
+                    <span class="serial">#-</span>
+                    <span class="lcs-val">&empty;</span>
+                    <span class="type">Unvisited</span>
+                </td>
+                <td>
+                    <span class="serial">#-</span>
+                    <span class="lcs-val">&empty;</span>
+                    <span class="type">Unvisited</span>
+                </td>
+                <td>
+                    <span class="serial">#-</span>
+                    <span class="lcs-val">&empty;</span>
+                    <span class="type">Unvisited</span>
+                </td>
+                <td>
+                    <span class="serial">#9</span>
+                    <span class="lcs-val">HAR</span>
+                    <span class="type">Match (R)</span>
+                </td>
+                <td>
+                    <span class="serial">#-</span>
+                    <span class="lcs-val">&empty;</span>
+                    <span class="type">Unvisited</span>
+                </td></tr><tr><td class='header-char'>T</td>
+                <td>
+                    <span class="serial">#-</span>
+                    <span class="lcs-val">&empty;</span>
+                    <span class="type">Unvisited</span>
+                </td>
+                <td>
+                    <span class="serial">#-</span>
+                    <span class="lcs-val">&empty;</span>
+                    <span class="type">Unvisited</span>
+                </td>
+                <td>
+                    <span class="serial">#-</span>
+                    <span class="lcs-val">&empty;</span>
+                    <span class="type">Unvisited</span>
+                </td>
+                <td>
+                    <span class="serial">#-</span>
+                    <span class="lcs-val">&empty;</span>
+                    <span class="type">Unvisited</span>
+                </td>
+                <td>
+                    <span class="serial">#-</span>
+                    <span class="lcs-val">&empty;</span>
+                    <span class="type">Unvisited</span>
+                </td>
+                <td>
+                    <span class="serial">#10</span>
+                    <span class="lcs-val">HART</span>
+                    <span class="type">Match (T)</span>
+                </td></tr></table></body></html>
